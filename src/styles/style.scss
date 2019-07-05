@@ -1,0 +1,74 @@
+.Grid {
+    margin-top: 20px;
+    height: 500px;
+    border-radius: 3px;
+    font-size: 0px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.GridCell {
+    border-top: 1px solid #d8d8d8;
+    border-left: 1px solid #d8d8d8;
+    display: inline-block;
+    color: black;
+    font-weight: 300;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    margin: 1px;
+
+    .text-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .text-count p {
+        font-size: 10px;
+        color: black;
+    }
+
+    &.filled {
+        background: rgb(21, 241, 241);
+    }
+
+    &.filled:hover {
+        background: rgb(248, 248, 248);
+    }
+
+    &.filled:active {
+        background: rgb(226, 226, 226);
+    }
+
+    &.path {
+        background: rgb(245, 166, 35);
+    }
+
+    &.path:hover {
+        background: rgb(248, 248, 248);
+    }
+
+    &.path:active {
+        background: rgb(226, 226, 226);
+    }
+
+    &.start {
+        background: rgb(126, 211, 33);
+        cursor: default;
+    }
+
+    &.end {
+        background: rgb(99, 149, 48);
+        cursor: default;
+    }
+}
+
+.GridCell:last-child {
+    border-right: 1px solid #d8d8d8;
+}
